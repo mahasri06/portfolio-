@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Block display property example */
+        .block-element {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #ddd;
+        }
+
+        /* Inline display property example */
+        .inline-element {
+            display: inline;
+            margin: 0 5px;
+            padding: 5px;
+            background-color: #aaa;
+        }
+
+        /* Container for project items */
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between project items */
+        }
+
+        /* Inline-block display property example */
+        .inline-block-element {
+            flex: 1 1 calc(50% - 20px); /* Adjust width to fit two elements per row with spacing */
+            box-sizing: border-box; /* Ensures padding and border are included in width calculation */
+            background-color: #bbb; /* Default background color for all project sections */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+            vertical-align: top; /* Ensures elements align properly */
+            padding: 10px;
+        }
+
+        /* Hover effect for inline-block elements */
+        .inline-block-element:hover {
+            background-color: #ddd; /* Change to desired hover color */
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            margin-top: 70px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 2em 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5em;
+        }
+
+        img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Ensures images fit within their containers */
+            max-width: 500px; /* Limits maximum width of images */
+            display: block; /* Ensures images appear as block-level elements */
+            margin-bottom: 1em; /* Adds space below images */
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .hidden-content {
+            display: none; /* Hide additional content by default */
+            margin-top: 1em;
+        }
+
+        .read-more-btn {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .read-more-btn:hover {
+            background-color: #555;
+        }
+
+        /* Contact details styling */
+        .contact-details {
+            max-width: 600px;
+            margin: 0 auto; /* Centers the contact details */
+            padding: 1em;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details p {
+            margin: 0.5em 0;
+        }
+
+        .contact-details strong {
+            color: #333;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333;">
+    <header>
+        <h1 style="margin: 0;">My Portfolio</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            
+            <img src="C:\Users\karun sai.D\OneDrive\Desktop\porfolio\studying.png" alt="Your Photo" style="width: 300px; height: 300px; border-radius: 50%; border: 3px solid #333; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+
+            <p>Hello! I am Mahasri, a student passionate about my career. Welcome to my portfolio!</p>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="inline-block-element">
+                    <h3>Project One</h3>
+                    <img src="C:\Users\karun sai.D\OneDrive\Desktop\porfolio\Salary analysis.jpg" alt="Project One">
+                    <p>This project analyzes employee salary data from 2020 to 2023...</p>
+                    <div class="hidden-content">
+                        <p>Full details about Project One. It includes various data analysis techniques and visualizations to interpret salary trends over the years. The analysis provides insights into compensation patterns and helps in understanding employee remuneration strategies better.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+                </div>
+                <div class="inline-block-element">
+                    <h3>Project Two</h3>
+                    <img src="C:\Users\karun sai.D\OneDrive\Desktop\porfolio\lifi.jpeg" alt="Project Two">
+                    <p>This project focuses on Li-Fi (Light Fidelity) technology...</p>
+                    <div class="hidden-content">
+                        <p>Full details about Project Two. This project delves into the emerging technology of Li-Fi, which utilizes light to transmit data, offering potential improvements in data transfer speeds and security compared to traditional Wi-Fi.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+                </div>
+                <div class="inline-block-element">
+                    <h3>Project Three</h3>
+                    <img src="C:\Users\karun sai.D\OneDrive\Desktop\porfolio\artificial-intelligence.webp" alt="Project Three">
+                    <p>This project explores the application of Artificial Intelligence (AI)...</p>
+                    <div class="hidden-content">
+                        <p>Full details about Project Three. The project covers various applications of AI, including machine learning models, natural language processing, and the impact of AI on different industries and sectors.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+                </div>
+                <div class="inline-block-element">
+                    <h3>Project Four</h3>
+                    <img src="C:\Users\karun sai.D\OneDrive\Desktop\porfolio\Boutique Management.jpeg" alt="Project Four">
+                    <p>The Boutique Management System Enhancement project aims to refine...</p>
+                    <div class="hidden-content">
+                        <p>Full details about Project Four. This project enhances a boutique management system, incorporating features such as inventory management, customer relationship management, and sales reporting to improve business efficiency.</p>
+                    </div>
+                    <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-details">
+                <p><strong>Name:</strong> Mahasri</p>
+                <p><strong>Contact Number:</strong> 89XXXXX</p>
+                <p><strong>Email ID:</strong> <a href="mailto:maha@gmail.com" style="color: #333;">maha@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Mahasri. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleContent(button) {
+            var content = button.previousElementSibling;
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
